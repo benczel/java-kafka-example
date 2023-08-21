@@ -30,7 +30,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>KafkaExample</mainClass>
+              <mainClass>KafkaExampleMain</mainClass>
             </manifest>
           </archive>
           <descriptorRefs>
