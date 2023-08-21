@@ -19,11 +19,13 @@ public class KafkaExample {
     {
         Thread one = new Thread(() -> {
                 try {
-                    Producer<String, String> producer = new KafkaProducer<>(props);
+                    Producer<String, Today> producer = new KafkaProducer<>(props);
+                    int i = 0;
                     while(true) {
-                        Date d = new Date();
-                        producer.send(new ProducerRecord<>(topic, d.toString()));
+                        Today today = new Today(new Date().toString(),i);
+                        producer.send(new ProducerRecord<>(topic, Integer.toString(i), today));
                         Thread.sleep(1000);
+                        i++;
                     }
                 } catch (InterruptedException e){
                     System.out.println(e);
@@ -36,15 +38,15 @@ public class KafkaExample {
                         String topic
                         )
     {
-        KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
+        KafkaConsumer<String, Today> consumer = new KafkaConsumer<>(props);
         consumer.subscribe(Arrays.asList(topic));
 
         while (true){
-            ConsumerRecords<String, String> records = consumer.poll(1000);
-            for(ConsumerRecord<String, String> record : records)
+            ConsumerRecords<String, Today> records = consumer.poll(1000);
+            for(ConsumerRecord<String, Today> record : records)
                 System.out.printf("%s [%d] offset=%d, key=%s, value=\"%s\"\n",
                         record.topic(), record.partition(),
-                        record.offset(), record.key(), record.value());
+                        record.offset(), record.key(), record.value().getDate());
         }
     }
 }

@@ -1,9 +1,9 @@
 import com.cloudkarafka.kafka.exmaple.KafkaClusterConfiguration;
 import com.cloudkarafka.kafka.exmaple.KafkaExample;
+import com.cloudkarafka.kafka.exmaple.Today;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.apache.kafka.common.serialization.StringSerializer;
 
-import java.util.Arrays;
 import java.util.Properties;
 
 public class KafkaExampleMain {
@@ -21,11 +21,11 @@ public class KafkaExampleMain {
 
         KafkaExample kafkaExample = new KafkaExample();
         Properties props = clusterConfiguration.getProperties();
-        String serializer = StringSerializer.class.getName();
-        String deserializer = StringDeserializer.class.getName();
-        props.put("key.serializer", serializer);
+        String serializer = Today.class.getName();
+        String deserializer = Today.class.getName();
+        props.put("key.serializer", StringSerializer.class.getName());
         props.put("value.serializer", serializer);
-        props.put("key.deserializer", deserializer);
+        props.put("key.deserializer", StringDeserializer.class.getName());
         props.put("value.deserializer", deserializer);
         kafkaExample.produce(props, topic);
         kafkaExample.consume(props, topic);
