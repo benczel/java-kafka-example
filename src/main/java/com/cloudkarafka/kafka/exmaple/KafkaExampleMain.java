@@ -1,6 +1,7 @@
-import com.cloudkarafka.kafka.exmaple.KafkaClusterConfiguration;
+package com.cloudkarafka.kafka.exmaple;
+
+import com.cloudkarafka.kafka.exmaple.configuration.KafkaClusterConfiguration;
 import com.cloudkarafka.kafka.exmaple.KafkaExample;
-import com.cloudkarafka.kafka.exmaple.entity.Today;
 import com.cloudkarafka.kafka.exmaple.serialization.TodayDeserializer;
 import com.cloudkarafka.kafka.exmaple.serialization.TodaySerializer;
 import org.apache.kafka.common.serialization.StringDeserializer;

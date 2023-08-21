@@ -30,7 +30,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>KafkaExampleMain</mainClass>
+              <mainClass>com.cloudkarafka.kafka.exmaple.KafkaExampleMain</mainClass>
             </manifest>
           </archive>
           <descriptorRefs>

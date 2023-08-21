@@ -1,4 +1,4 @@
-package com.cloudkarafka.kafka.exmaple;
+package com.cloudkarafka.kafka.exmaple.configuration;
 
 import java.util.Properties;
 
