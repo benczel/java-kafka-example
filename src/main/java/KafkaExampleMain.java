@@ -1,6 +1,8 @@
 import com.cloudkarafka.kafka.exmaple.KafkaClusterConfiguration;
 import com.cloudkarafka.kafka.exmaple.KafkaExample;
-import com.cloudkarafka.kafka.exmaple.Today;
+import com.cloudkarafka.kafka.exmaple.entity.Today;
+import com.cloudkarafka.kafka.exmaple.serialization.TodayDeserializer;
+import com.cloudkarafka.kafka.exmaple.serialization.TodaySerializer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.apache.kafka.common.serialization.StringSerializer;
 
@@ -21,8 +23,8 @@ public class KafkaExampleMain {
 
         KafkaExample kafkaExample = new KafkaExample();
         Properties props = clusterConfiguration.getProperties();
-        String serializer = Today.class.getName();
-        String deserializer = Today.class.getName();
+        String serializer = TodaySerializer.class.getName();
+        String deserializer = TodayDeserializer.class.getName();
         props.put("key.serializer", StringSerializer.class.getName());
         props.put("value.serializer", serializer);
         props.put("key.deserializer", StringDeserializer.class.getName());
