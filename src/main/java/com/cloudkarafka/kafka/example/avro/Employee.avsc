@@ -1,0 +1,19 @@
+{
+  "namespace": "com.cloudkarafka.kafka.example.entity",
+  "type": "record",
+  "name": "Employee",
+  "fields": [
+    {
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "name": "firstname",
+      "type": "string"
+    },
+    {
+      "name": "lastname",
+      "type": "string"
+    }
+  ]
+}

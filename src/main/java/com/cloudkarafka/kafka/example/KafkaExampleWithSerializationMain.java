@@ -1,9 +1,8 @@
-package com.cloudkarafka.kafka.exmaple;
+package com.cloudkarafka.kafka.example;
 
-import com.cloudkarafka.kafka.exmaple.configuration.KafkaClusterConfiguration;
-import com.cloudkarafka.kafka.exmaple.KafkaExample;
-import com.cloudkarafka.kafka.exmaple.serialization.TodayDeserializer;
-import com.cloudkarafka.kafka.exmaple.serialization.TodaySerializer;
+import com.cloudkarafka.kafka.example.configuration.KafkaClusterConfiguration;
+import com.cloudkarafka.kafka.example.serialization.TodayDeserializer;
+import com.cloudkarafka.kafka.example.serialization.TodaySerializer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.apache.kafka.common.serialization.StringSerializer;
 
@@ -22,7 +21,7 @@ public class KafkaExampleMain {
                 password
         );
 
-        KafkaExample kafkaExample = new KafkaExample();
+        KafkaExampleWithSerialization kafkaExample = new KafkaExampleWithSerialization();
         Properties props = clusterConfiguration.getProperties();
         String serializer = TodaySerializer.class.getName();
         String deserializer = TodayDeserializer.class.getName();

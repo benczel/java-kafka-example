@@ -13,7 +13,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.Properties;
 
-public class KafkaExample {
+public class KafkaExampleWithSerialization {
 
     public void produce(Properties props,
                         String topic)
