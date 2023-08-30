@@ -1,4 +1,4 @@
-package com.cloudkarafka.kafka.exmaple.configuration;
+package com.cloudkarafka.kafka.example.configuration;
 
 import java.util.Properties;
 

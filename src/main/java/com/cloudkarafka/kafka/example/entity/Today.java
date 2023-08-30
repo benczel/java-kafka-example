@@ -1,9 +1,6 @@
-package com.cloudkarafka.kafka.exmaple.entity;
+package com.cloudkarafka.kafka.example.entity;
 
 import java.io.Serializable;
-import java.nio.charset.StandardCharsets;
-import java.util.Map;
-
 
 
 public class Today implements Serializable {

@@ -8,7 +8,7 @@ import org.apache.kafka.common.serialization.StringSerializer;
 
 import java.util.Properties;
 
-public class KafkaExampleMain {
+public class KafkaExampleWithSerializationMain {
 
     public static void main(String[] args) {
 		String broker = System.getenv("CLOUDKARAFKA_BROKERS");

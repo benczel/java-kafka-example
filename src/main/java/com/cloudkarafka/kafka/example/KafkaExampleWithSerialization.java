@@ -1,7 +1,7 @@
-package com.cloudkarafka.kafka.exmaple;
+package com.cloudkarafka.kafka.example;
 
 
-import com.cloudkarafka.kafka.exmaple.entity.Today;
+import com.cloudkarafka.kafka.example.entity.Today;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;

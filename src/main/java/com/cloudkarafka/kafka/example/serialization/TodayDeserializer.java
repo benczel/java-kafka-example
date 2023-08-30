@@ -1,6 +1,6 @@
-package com.cloudkarafka.kafka.exmaple.serialization;
+package com.cloudkarafka.kafka.example.serialization;
 
-import com.cloudkarafka.kafka.exmaple.entity.Today;
+import com.cloudkarafka.kafka.example.entity.Today;
 import org.apache.kafka.common.serialization.Deserializer;
 
 import java.nio.charset.StandardCharsets;
